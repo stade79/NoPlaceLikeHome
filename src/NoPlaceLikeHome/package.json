@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "name": "NoPlaceLikeHome",
+  "private": true,
+  "description": "No Place Like Home Website",
+  "authors": [
+    "Peter Stade"
+  ],
+  "scripts": {
+    "init": "npm install",
+    "install": "bower install"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1"
+  }
+}
