@@ -223,7 +223,7 @@ gulp.task('clean', gulp.series('clean-fonts', 'clean-css', 'clean-html', 'clean-
     clean(delconfig, done);
 }));
 
-gulp.task('build-dev', gulp.series('clean', 'css', 'js', 'injectAll', 'html'));
+gulp.task('build-dev', gulp.series('clean', 'css', 'js', 'fonts', 'injectAll', 'html'));
 
 gulp.task('serve-dev', gulp.parallel(
     'build-dev',
@@ -238,7 +238,7 @@ gulp.task('serve-dev', gulp.parallel(
     }
 ));
 
-gulp.task('build-prod', gulp.series('clean', 'injectBower', 'injectJs', 'injectCss', 'images-min', function () {
+gulp.task('build-prod', gulp.series('clean', 'injectBower', 'injectJs', 'fonts', 'injectCss', 'images-min', function () {
     log('Concatenize the javascript and css, then minify javascript, css and html and optimizes images');
 
     return gulp
