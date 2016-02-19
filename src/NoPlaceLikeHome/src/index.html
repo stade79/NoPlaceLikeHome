@@ -9,6 +9,8 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/bower_components/font-awesome-bower/css/font-awesome.css" />
+    <link rel="stylesheet" href="/bower_components/wowjs/css/libs/animate.css" />
+    <link rel="stylesheet" href="/bower_components/nanogallery/dist/css/nanogallery.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css css/app.css-->
@@ -31,18 +33,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#top"><img alt="no place like home" class="imageLogo" /></a>
+                    <a href="#top"><img alt="no place like home" class="imageLogo" src="images/logo40.png" /></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#top">Home</a></li>
                         <li><a href="#AboutUs">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Prices</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">References</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <!--<li><a href="#Services">Services</a></li>
+                        <li><a href="#Prices">Prices</a></li>-->
+                        <li><a href="#Gallery">Gallery</a></li>
+                        <li><a href="#References">References</a></li>
+                        <li><a href="#ContactUs">Contact us</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,9 +54,9 @@
     <div class="container">
 
         <section class="row title-row">
-            <div class="fill-screen" style="background-image: url(images/Stehag_Dark.png)">
+            <div class="fill-screen stellar-bg" style="background-image: url(images/noplacelikehomeLogo.jpg)" data-stellar-background-ratio="0.2">
 
-                <img class="img-responsive title-image" src="images/underconstruction.gif" alt="Under Construction" />
+                <img class="img-responsive title-image" src="images/logoLinda.png" alt="Linda Roupe Inrednings Arkitektur design" style="opacity: 0.8" />
 
                 <div class="down-button">
                     <a class="btn" href="#AboutUs">
@@ -63,10 +65,148 @@
                 </div>
             </div>
         </section>
+
+        <section id="AboutUs" class="row text-banner">
+            <div class="wow fadeIn" data-wow-duration="1500ms">
+                <h1>About us</h1>
+            </div>
+            <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
+                <div class="wrap-about">
+                    <div class="icon-box">
+                        <i class="fa fa-lightbulb-o fa-4x"></i>
+                    </div>
+                    <!-- Express About Yourself -->
+                    <div class="about-content text-center">
+                        <h3 class="ddd">We're Creative</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="250ms">
+                <div class="wrap-about">
+                    <div class="icon-box">
+                        <i class="fa fa-users fa-4x"></i>
+                    </div>
+                    <!-- Express About Yourself -->
+                    <div class="about-content text-center">
+                        <h3>We're Professional</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
+                <div class="wrap-about kill-margin-bottom">
+                    <div class="icon-box">
+                        <i class="fa fa-users fa-4x"></i>
+                    </div>
+                    <!-- Express About Yourself -->
+                    <div class="about-content text-center">
+                        <h3>We're Professional</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+
+        <!--<section id="Services" class="row text-banner">
+            <h1>Services</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="fill-screen fixed-attachment" style="background-image: url(images/Stehag_Dark.png)">
+            </div>
+        </section>
+
+        <section id="Prices" class="row text-banner">
+            <h1>Prices</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="fill-screen fixed-attachment" style="background-image: url(images/Stehag_Dark.png)">
+            </div>
+        </section>-->
+
+        <section id="Gallery" class="row text-banner">
+            <h1>Gallery</h1>
+            <div id="nanoGallery">
+                <a href="images/Photos/full/sodraStorgatan1.jpg" data-ngthumb="images/Photos/thumb/sodraStorgatan1.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling s&ouml;dra storgatan Helsingborg</a>
+                <a href="images/Photos/full/sodraStorgatan2.jpg" data-ngthumb="images/Photos/thumb/sodraStorgatan2.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling s&ouml;dra storgatan Helsingborg</a>
+                <a href="images/Photos/full/sodraStorgatan3.jpg" data-ngthumb="images/Photos/thumb/sodraStorgatan3.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling s&ouml;dra storgatan Helsingborg</a>
+                <a href="images/Photos/full/sodraStorgatan4.jpg" data-ngthumb="images/Photos/thumb/sodraStorgatan4.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling s&ouml;dra storgatan Helsingborg</a>
+                <a href="images/Photos/full/sodraStorgatan5.jpg" data-ngthumb="images/Photos/thumb/sodraStorgatan5.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling s&ouml;dra storgatan Helsingborg</a>
+                <a href="images/Photos/full/sodraStorgatan6.jpg" data-ngthumb="images/Photos/thumb/sodraStorgatan6.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling s&ouml;dra storgatan Helsingborg</a>
+
+                <a href="images/Photos/full/ramlosa1.jpg" data-ngthumb="images/Photos/thumb/ramlosa1.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling radhus Raml&ouml;sa</a>
+                <a href="images/Photos/full/ramlosa2.jpg" data-ngthumb="images/Photos/thumb/ramlosa2.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling radhus Raml&ouml;sa</a>
+                <a href="images/Photos/full/ramlosa3.jpg" data-ngthumb="images/Photos/thumb/ramlosa3.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling radhus Raml&ouml;sa</a>
+                <a href="images/Photos/full/ramlosa4.jpg" data-ngthumb="images/Photos/thumb/ramlosa4.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling radhus Raml&ouml;sa</a>
+                <a href="images/Photos/full/ramlosa5.jpg" data-ngthumb="images/Photos/thumb/ramlosa5.jpg" data-ngdesc="Styling s&ouml;dra storgatan">Styling radhus Raml&ouml;sa</a>
+            </div>
+        </section>
+
+        <section id="References" class="row text-banner">
+            <h1>References</h1>
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/Photos/full/ramlosa2.jpg" alt="Raml&ouml;sa">
+                        <div class="carousel-caption">
+                            <h3>Styling radhus Raml&ouml;sa</h3>
+                            <p>Here we styled a terrace house in Raml&ouml;sa</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/Photos/full/sodraStorgatan1.jpg" alt="Styling s&ouml;dra storgatan">
+                        <div class="carousel-caption">
+                            <h3>Styling s&ouml;dra storgatan</h3>
+                            <p>Here we styled a an apartment in s&ouml;dra storgatan Helsingborg</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="ContactUs" class="row contact-us wow fadeInDown">
+            <h1>Contact us</h1>
+            <h3></h3>
+            <p>Phone : 070-308 43 02</p>
+            <p>Email : <a href="mailto:linda@no-place-like-home.sen" target="_top">linda@no-place-like-home.se</a></p>
+            <p>Address : Sp&aring;r&ouml;gatan 4, 25732 Rydeb&auml;ck</p>
+            <!--<div class="google-maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2233.313758004861!2d12.775319816215472!3d55.96126518336177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653cb399425a76d%3A0x5a16b83a83b7e9be!2zU3DDpXLDtmdhdGFuIDQsIDI1NyAzMiBSeWRlYsOkY2s!5e0!3m2!1sen!2sse!4v1455834157078" width="300" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>-->
+        </section>
+
     </div>
 
     <footer class="container">
-        <h1>FOOTER</h1>
+        <div>
+            <a href="[full link to your Twitter]">
+                <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/twitter1.png" width="35" height="35" />
+            </a>
+            <a href="[full link to your LinkedIn]">
+                <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="35" height="35" />
+            </a>
+            <a href="https://www.facebook.com/LindaRoupeInredningsarkitekturochdesign/">
+                <img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="35" height="35" />
+            </a>
+        </div>
     </footer>
 
     <!-- build:js js/lib.js -->
@@ -75,6 +215,10 @@
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/bower_components/classie/classie.js"></script>
     <script src="/bower_components/AnimatedHeader/js/cbpAnimatedHeader.min.js"></script>
+    <script src="/bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="/bower_components/jquery.stellar/jquery.stellar.js"></script>
+    <script src="/bower_components/wowjs/dist/wow.js"></script>
+    <script src="/bower_components/nanogallery/dist/jquery.nanogallery.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.js-->

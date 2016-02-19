@@ -20,7 +20,11 @@
             source + 'css/**/*.*',
             source + 'lib/css/*.*'
         ],
-        fonts: './bower_components/font-awesome-bower/fonts/**/*.*',
+        fonts: [
+            './bower_components/font-awesome-bower/fonts/**/*.*',
+            './bower_components/bootstrap/fonts/**/*.*',
+            './bower_components/nanogallery/dist/css/font/**/*.*'
+            ],
         index: source + 'index.html',
         images: source + 'images/**/*.*',
         js: [
