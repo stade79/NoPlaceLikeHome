@@ -21,6 +21,7 @@
             source + 'lib/css/*.*'
         ],
         fonts: [
+            source + 'fonts/**/*.*',
             './bower_components/font-awesome-bower/fonts/**/*.*',
             './bower_components/bootstrap/fonts/**/*.*',
             './bower_components/nanogallery/dist/css/font/**/*.*'

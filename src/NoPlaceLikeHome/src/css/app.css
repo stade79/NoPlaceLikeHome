@@ -1,5 +1,19 @@
-﻿body {
-    font-family: 'Open Sans', sans-serif;
+﻿@font-face {
+  font-family: 'AmericanTypewriter';
+  src: url('AmericanTypewriter.woff') format('woff'),
+       url('AmericanTypewriter.ttf') format('truetype'),
+       url('AmericanTypewriter.svg#AmericanTypewriter') format('svg'),
+       url('AmericanTypewriter.eot'),
+       url('AmericanTypewriter.eot?#iefix') format('embedded-opentype'),
+       url('AmericanTypewriter.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: Courier New, Courier, monospace;
+    background-image: url(../images/back.png); 
+    background-color: darkgrey;
 }
 
 .navbar {
@@ -7,12 +21,32 @@
     -webkit-transition: all 0.5;
     transition: all 0.5s;
 }
+
+.navbar-inverse {
+    background-color: #83867F;
+}
+
 .navbar-inverse .navbar-nav > li > a {
-    color: #bbb;
+    color: white;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #9d9d9d;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #83867F;
+    color: white;
+    background-color: #83867F;
 }
 
 .cbp-af-header-shrink {
     opacity: 0.9;
+}
+
+.cbp-af-header-shrink .submenu-text {
+    display: none;
 }
 
 header  {
@@ -21,7 +55,7 @@ header  {
 }
 
 footer {
-    background-color: #333;
+    background-color: #83867F;
     color: #ddd;
     padding: 20px;
     text-align: center;
@@ -96,6 +130,37 @@ article p {
     font-size: 18px;
 }
 
+.logo-text-white {
+    color:white;
+    display:inline;
+}
+
+.logo-text-black {
+    color:black;
+    display:inline;
+}
+
+.submenu-text {
+    text-align: center;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    font-weight :500;
+
+    /*text-shadow: 0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #fff,
+            0 0 40px #ff00de,
+            0 0 70px #ff00de,
+            0 0 80px #ff00de,
+            0 0 100px #ff00de,
+            0 0 150px #ff00de;*/
+
+    color:#fff;
+    background-color:#83867F;
+    text-shadow:#fff 0 0 10px;
+}
+
 .contact-us {
     margin: 50px;
     text-align: center;
@@ -138,6 +203,18 @@ article p {
         padding-bottom: 90%;
         overflow: hidden;
     }
+
+    .logo-text-white {
+      font-size: 15px;
+    }
+
+    .logo-text-black {
+      font-size: 15px; 
+    }
+
+    .submenu-text {
+      font-size: 19px;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:991px){
@@ -150,10 +227,22 @@ article p {
     }
 }
 
-@media screen and (min-width:992px) {
-  /*.imageLogo::after {
-    content:url("../images/logo60.png");
-  }*/
+@media screen and (min-width:992px){
+  body {
+      font-size: 16px;
+  }
+
+  .logo-text-white {
+      font-size: 30px;
+  }
+
+  .logo-text-black {
+      font-size: 30px; 
+  }
+
+  .submenu-text {
+      font-size: 35px;
+    }
 }
 
 @media (max-width: 1024px) {
