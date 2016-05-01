@@ -133,11 +133,13 @@ article p {
 .logo-text-white {
     color:white;
     display:inline;
+    font-weight: 600;
 }
 
 .logo-text-black {
     color:black;
     display:inline;
+    font-weight: 600;
 }
 
 .submenu-text {
@@ -242,7 +244,7 @@ article p {
 
   .submenu-text {
       font-size: 35px;
-    }
+  }
 }
 
 @media (max-width: 1024px) {
