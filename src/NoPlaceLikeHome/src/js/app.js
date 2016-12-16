@@ -12,7 +12,7 @@
     // smooth scrolling
     $('nav a, .down-button a').bind('click', function () {
         $('html, body').stop().animate({
-            scrollTop: $($(this).attr('href')).offset().top - 50
+            scrollTop: $($(this).attr('href')).offset().top - 90
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
