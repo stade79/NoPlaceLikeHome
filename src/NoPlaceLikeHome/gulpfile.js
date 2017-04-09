@@ -144,7 +144,9 @@ gulp.task('injectBower', function () {
 
     return gulp
         .src(config.index)
+        .pipe(plugins.convertEncoding({ from: 'iso-8859-1', to: 'utf8' }))
         .pipe(wiredep(options))
+        .pipe(plugins.convertEncoding({ from: 'utf8', to: 'iso-8859-1' }))
         .pipe(gulp.dest(config.source));
 });
 
@@ -153,7 +155,9 @@ gulp.task('injectJs', gulp.series(function () {
 
     return gulp
         .src(config.index)
+        .pipe(plugins.convertEncoding({ from: 'iso-8859-1', to: 'utf8' }))
         .pipe(plugins.inject(gulp.src(config.js), { read: false }), { relative: false })
+        .pipe(plugins.convertEncoding({ from: 'utf8', to: 'iso-8859-1' }))
         .pipe(gulp.dest(config.source));
 }));
 
@@ -163,7 +167,9 @@ gulp.task('injectCss', gulp.series('css', function () {
 
     return gulp
         .src(config.index)
+        .pipe(plugins.convertEncoding({ from: 'iso-8859-1', to: 'utf8' }))
         .pipe(plugins.inject(gulp.src(config.css), { read: false }), { relative: true })
+        .pipe(plugins.convertEncoding({ from: 'utf8', to: 'iso-8859-1' }))
         .pipe(gulp.dest(config.source));
 }));
 
@@ -176,7 +182,10 @@ gulp.task('html', gulp.series(
 
             return gulp
                 .src(config.index)
+                ///.pipe(plugins.header('\ufeff'))
+                .pipe(plugins.convertEncoding({ from: 'iso-8859-1', to: 'utf8' }))
                 .pipe(plugins.useref({ searchPath: './' }))
+                .pipe(plugins.convertEncoding({from: 'utf8', to: 'iso-8859-1' }))
                 .pipe(gulp.dest(config.build));
         }
     )
@@ -189,8 +198,10 @@ gulp.task('html-min', gulp.series(
 
         return gulp
             .src(config.index)
+            .pipe(plugins.convertEncoding({ from: 'iso-8859-1', to: 'utf8' }))
             .pipe(plugins.useref({ searchPath: './' }))
             .pipe(plugins.minifyHtml({ empty: true }))
+            .pipe(plugins.convertEncoding({ from: 'utf8', to: 'iso-8859-1' }))
             .pipe(gulp.dest(config.build));
     }
 ));
@@ -243,6 +254,7 @@ gulp.task('build-prod', gulp.series('clean', 'injectBower', 'injectJs', 'fonts',
 
     return gulp
         .src(config.index)
+        .pipe(plugins.convertEncoding({ from: 'iso-8859-1', to: 'utf8' }))
         .pipe(plugins.plumber())
         .pipe(plugins.useref({ searchPath: './' }))
         .pipe(plugins.if('*.js', plugins.uglify({ mangle: true })))
@@ -251,6 +263,7 @@ gulp.task('build-prod', gulp.series('clean', 'injectBower', 'injectJs', 'fonts',
         .pipe(plugins.if('*.js', plugins.rev()))
         .pipe(plugins.if('*.css', plugins.rev()))
         .pipe(plugins.revReplace())
+        .pipe(plugins.convertEncoding({ from: 'utf8', to: 'iso-8859-1' }))
         .pipe(gulp.dest(config.build));
 }));
 

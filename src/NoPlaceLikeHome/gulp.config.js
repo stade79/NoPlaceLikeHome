@@ -26,7 +26,11 @@
             './bower_components/bootstrap/fonts/**/*.*',
             './bower_components/nanogallery/dist/css/font/**/*.*'
             ],
-        index: source + 'index.html',
+        index: [
+            source + 'index.html',
+            source + 'services.html',
+            source + 'shop.html'
+        ],
         images: source + 'images/**/*.*',
         js: [
             source + '**/*.js',

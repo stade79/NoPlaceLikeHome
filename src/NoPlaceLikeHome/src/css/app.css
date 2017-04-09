@@ -1,17 +1,17 @@
 ﻿@font-face {
   font-family: 'AmericanTypewriter';
-  src: url('AmericanTypewriter.woff') format('woff'),
-       url('AmericanTypewriter.ttf') format('truetype'),
-       url('AmericanTypewriter.svg#AmericanTypewriter') format('svg'),
-       url('AmericanTypewriter.eot'),
-       url('AmericanTypewriter.eot?#iefix') format('embedded-opentype'),
-       url('AmericanTypewriter.woff2') format('woff2');
+  src: url(../fonts/AmericanTypewriter.woff) format('woff'),
+       url(../fonts/AmericanTypewriter.ttf) format('truetype'),
+       url(../fonts/AmericanTypewriter.svg#AmericanTypewriter) format('svg'),
+       url(../fonts/AmericanTypewriter.eot),
+       url(../fonts/AmericanTypewriter.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/AmericanTypewriter.woff2) format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-    font-family: Courier New, Courier, monospace;
+    font-family: 'AmericanTypewriter';
     background-color: white;
 }
 
@@ -19,6 +19,10 @@ body {
     margin-bottom: 0px;
     -webkit-transition: all 0.5;
     transition: all 0.5s;
+}
+
+.navbar-header {
+    margin-top: 5px;
 }
 
 .navbar-inverse {
@@ -91,6 +95,10 @@ article p {
     height: 300px;
 }
 
+.content p {
+    margin: 8px;
+}
+
 .fixed-attachment {
     background-attachment: fixed;
 }
@@ -119,6 +127,36 @@ article p {
     color: white;
 }
 
+.centerImageLinksDiv {
+    position: absolute;
+    bottom: 7%;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerImageLinksDiv .box {
+    background-color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.centerImageLinksDiv .centeredText {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerImageLinksDiv a {
+    text-decoration: underline;
+    /*color:blue;*/
+}
+
 .text-banner {
     text-align: center;
     margin: 40px 20px;
@@ -139,6 +177,14 @@ article p {
 }
 
 .logo-text-black {
+    color:black;
+    display:inline;
+    font-weight: 600;
+    border-style: double;
+    padding: 4px;
+}
+
+.text-black {
     color:black;
     display:inline;
     font-weight: 600;
@@ -163,11 +209,6 @@ article p {
     color:#fff;
     background-color:#83867F;
     text-shadow:#fff 0 0 10px;
-}
-
-.contact-us {
-    margin: 50px;
-    text-align: center;
 }
 
 
@@ -221,8 +262,31 @@ article p {
       font-size: 15px; 
     }
 
+    .text-black {
+      font-size: 15px; 
+    }
+
     .submenu-text {
       font-size: 19px;
+    }
+
+    .subTitle {
+      font-size: 16px;
+      padding-bottom: 5px;
+      /*font-weight: bold;*/
+    }
+
+    .topsection{
+        margin-top: 55px;
+    }
+
+    .collaboratorsLogoImage {
+        max-width: 80px;
+        margin: 5px;
+    }
+
+    .paddedImageCarousel {
+        padding: 5px;
     }
 }
 
@@ -241,14 +305,32 @@ article p {
 
     .navbar-brand {
         float: none;
+        margin: 8px;
     }
 
-   .navbar-nav > li > a {
-      font-size: 22px;
-   }
+    .navbar-nav > li > a {
+        font-size: 22px;
+    }
+
+    .logo-text-black {
+        font-size: 40px; 
+    }
+
+    .collaboratorsLogoImage {
+      max-width: 200px;
+      margin: 5px;
+    }
 
     .navbar-inverse .navbar-nav > li > a {
-        font-size: 11px;
+        font-size: 20px;
+    }
+
+    .topsection{
+        margin-top: 70px;
+    }
+
+      .topsection{
+        margin-top: 120px;
     }
 }
 
@@ -263,6 +345,7 @@ article p {
 
   .navbar-brand {
     float: none;
+    margin: 8px;
   }
 
   .logo-text-white {
@@ -273,8 +356,31 @@ article p {
       font-size: 40px; 
   }
 
+  .text-black {
+      font-size: 40px; 
+  }
+
   .submenu-text {
       font-size: 35px;
+  }
+
+  .subTitle {
+      font-size: 18px;
+      padding-bottom: 5px;
+      /*font-weight: bold;*/
+  }
+
+  .topsection{
+        margin-top: 120px;
+    }
+
+  .collaboratorsLogoImage {
+      max-width: 200px;
+      margin: 5px;
+  }
+
+  .paddedImageCarousel {
+      padding: 40px;
   }
 }
 
