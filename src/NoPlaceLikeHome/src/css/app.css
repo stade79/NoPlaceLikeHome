@@ -46,12 +46,22 @@ body {
     color: black;
 }
 
+.centered-menu {
+    float:none;
+    display:inline-block
+}
+
 .cbp-af-header-shrink {
     opacity: 0.9;
 }
 
 .cbp-af-header-shrink .submenu-text {
     display: none;
+}
+
+.carousel-caption {
+    text-shadow: 4px 4px 5px #080808;
+    letter-spacing: 1px;
 }
 
 header  {
@@ -129,7 +139,7 @@ article p {
 
 .centerImageLinksDiv {
     position: absolute;
-    bottom: 7%;
+    bottom: 4%;
     color: white;
     left: 50%;
     transform: translate(-50%, -50%);
