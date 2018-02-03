@@ -137,6 +137,23 @@
         </div>
     </footer>
 
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title, text-info">Uppdatering</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Butiken är för närvarande vilande, men gå gärna in och se de tjänster jag erbjuder</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" href="services.html" role="button">Gå till mina <strong>Tjänster</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- build:js js/lib.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -160,6 +177,15 @@
 
     <!-- endinject -->
     <!-- endbuild -->
+
+    <script>
+        $(document).ready(function () {
+            $('#myModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        });
+    </script>
 
 </body>
 </html>
